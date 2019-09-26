@@ -1,0 +1,13 @@
+// Escribí una función factorial, que calcule el factorial de un numero.
+
+function factorial(numero){
+  var resultado = 0;
+  for(var i=1; i<=numero; i++){
+    if(resultado===0){
+      resultado = i;
+    } else{
+      resultado = resultado * i;
+    }
+  }
+  return resultado;
+}
