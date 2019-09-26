@@ -1,0 +1,18 @@
+// Necesitamos una función productoria que reciba un array de números y devuelva su productoria: el resultado de multiplicar todos sus elementos entre ellos.
+//
+// Por ejemplo, productoria([1, 4, 7]) debe devolver 28, que es 1 * 4 * 7.
+
+function productoria(array){
+  var resultado = 1;
+  var res = 0;
+  for(var i=0; i<array.length; i++){
+    if(res===0){
+      res=array[i];
+      resultado = res;
+    } else {
+      resultado = res * array[i];
+      res = resultado;
+    }
+  }
+  return resultado;
+}
