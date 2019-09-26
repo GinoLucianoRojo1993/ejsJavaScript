@@ -1,0 +1,28 @@
+// Necesitamos una función masMenos que reciba un array y devuelva otro con los siguientes tres números:
+//
+// en la primera posición, la fracción de números que son positivos
+// en la segunda posición, la fracción de números que son cero
+// en la última posición, la fracción de números que son negativos
+// Por ejemplo, masMenos([1, 2, 0, -1]) debería devolver [0.5, 0.25, 0.25], dado que hay 50% de positivos, 25% de ceros, y 25% de negativos.
+
+function masMenos(array){
+  var contadorPositivos = 0;
+  var contadorNegativos = 0;
+  var contadorCero = 0;
+  var resultado = [];
+  for(var i=0; i<array.length; i++){
+    if(array[i]>0){
+      contadorPositivos++;
+    }
+    if(array[i]<0){
+      contadorNegativos++;
+    }
+    if(array[i]===0){
+      contadorCero++;
+    }
+  }
+  resultado.push(contadorPositivos/array.length);
+  resultado.push(contadorCero/array.length);
+  resultado.push(contadorNegativos/array.length);
+  return resultado;
+}
